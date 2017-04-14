@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="scratchView">
+        <attr name="drawType">
+            <enum name="circle" value="0"/>
+            <enum name="ellipse" value="1"/>
+            <enum name="triangle" value="2"/>
+        </attr>
+        <attr name="orientation">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+            <enum name="around" value="2"/>
+        </attr>
+
+        <attr name="mGap" format="dimension"/>
+        <attr name="mRadius" format="dimension"/>
+        <attr name="BgColor" format="color"/>
+
+    </declare-styleable>
+</resources>
