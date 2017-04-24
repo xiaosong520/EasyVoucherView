@@ -16,24 +16,24 @@
             android:padding="5dp"
             android:textColor="@color/colorAccent"
             android:text="优惠劵10元"
-            android:textSize="18dp"/>
+            android:textSize="18sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14dp"
+            android:textSize="14sp"
             android:padding="5dp"
             android:text="使用范围:酒店/机票/旅行" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="13dp"
+            android:textSize="13sp"
             android:padding="5dp"
             android:text="编号:8888888888888" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="13dp"
+            android:textSize="13sp"
             android:paddingLeft="5dp"
             android:paddingTop="5dp"
             android:text="截止日期:2017-4-14" />
