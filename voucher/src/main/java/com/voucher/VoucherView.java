@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 
 
 /**
- * @TODO<自定义锯齿View  圆>
+ * @TODO<自定义优惠券控件>
  * @author 小嵩
  * @date 2017-4-14
  */
