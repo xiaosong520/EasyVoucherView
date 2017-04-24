@@ -4,8 +4,10 @@
 优惠券边缘锯齿形状有：圆形、椭圆、三角形、正方形；
 锯齿的间距和大小、控件颜色等可自定义设置。
 
-![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/preview1.png)
-
+![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/circle.png)
+![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/ellipse.png)
+![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/square.png)
+![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/triangle.png)
 ## How to use （如何使用）
 
 #### 1.下载源代码，然后将项目中 VoucherView 类 以及 attrs.xml 文件里面的自定义属性拷贝到项目中去
