@@ -1,15 +1,21 @@
-# EasyVoucherView
+## EasyVoucherView
 ## 一个自定义View 优惠券控件
 
 这个项目的优势：
 1.优惠券边缘锯齿形状有：圆形、椭圆、三角形、正方形；
+
 2.锯齿的间距、大小、控件颜色等可自定义设置；
+
 3.之前搜到的好几个项目都是单纯的绘制白色锯齿添加到Canvas上面去，如果把布局的背景改成其他的颜色，就一点都不美观了；所以这个项目和其他类似的优惠券不同，我用另外的思路实现了这个功能，这个控件的边缘锯齿是透明的！
+![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/others.png)
+
+### 效果图
 
 ![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/circle.png)
 ![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/ellipse.png)
 ![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/square.png)
 ![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/triangle.png)
+
 ## How to use （如何使用）
 
 #### 1.下载源代码，然后将项目中 VoucherView 类 以及 attrs.xml 文件里面的自定义属性拷贝到项目中去
