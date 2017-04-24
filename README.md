@@ -52,7 +52,7 @@ xmlns:VoucherView="http://schemas.android.com/apk/res-auto"
 |method(方法名称)|format(参数格式）|description（描述）|
 |---|---|---|
 |drawType|enum（枚举）|有圆形、椭圆、三角形、正方形这四种边缘锯齿形状
-|orientation|enum（枚举）|包含 horizontal、vertical、around 这三种样式，分别表示锯齿方向水平、垂直、四周。
+|orientation|enum（枚举）|包含 horizontal、vertical、around 这三种方向，分别表示水平、垂直、四周。
 |mGap|dimension（尺寸）|该参数控制边缘锯齿之间的间隔宽度
 |mRadius|dimension（尺寸）|该参数控制边缘锯齿的半径长度
 |BgColor|color（颜色）|该参数控制自定义控件的背景颜色
