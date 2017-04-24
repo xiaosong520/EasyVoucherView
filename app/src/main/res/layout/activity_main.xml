@@ -17,8 +17,8 @@
         android:layout_centerHorizontal="true"
         VoucherView:drawType="circle"
         VoucherView:orientation="horizontal"
-        VoucherView:mGap="3dp"
-        VoucherView:mRadius="6dp"
+        VoucherView:mGap="5dp"
+        VoucherView:mRadius="5dp"
         VoucherView:BgColor="#FFA90F">
 
         <include

@@ -57,6 +57,7 @@ public class VoucherView extends LinearLayout {
     private static final int CIRCLE = 0;
     private static final int ELLIPSE = 1;
     private static final int TRIANGLE = 2;
+    private static final int SQUARE = 3;
 
 
 
@@ -76,11 +77,10 @@ public class VoucherView extends LinearLayout {
     public VoucherView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        mOrientation = DRAW_HORIZONTAL;//默认水平方向
         if (attrs != null) {
             TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.scratchView, 0, 0);
             drawType = a.getInt(R.styleable.scratchView_drawType, CIRCLE);
-            mOrientation = a.getInt(R.styleable.scratchView_orientation,DRAW_HORIZONTAL);
+            mOrientation = a.getInt(R.styleable.scratchView_orientation,DRAW_HORIZONTAL);//默认水平方向
             mGap = a.getDimensionPixelOffset(R.styleable.scratchView_mGap, 5);
             mRadius = a.getDimensionPixelOffset(R.styleable.scratchView_mRadius, 10);
             mPaintColor = a.getColor(R.styleable.scratchView_BgColor, 0xFFc0c0c0);
@@ -185,8 +185,10 @@ public class VoucherView extends LinearLayout {
                    drawHorCircle();
                }else if (drawType==ELLIPSE){//椭圆
                    drawHorEllipse();
-               }else {//三角形
+               }else if(drawType==TRIANGLE){//三角形
                    drawHorTriangle();
+               }else{//正方形
+                   drawHorSquare();
                }
                break;
 
@@ -198,8 +200,10 @@ public class VoucherView extends LinearLayout {
                    drawVelCircle();
                }else if (drawType==ELLIPSE){//椭圆
                    drawVelEllipse();
-               }else {//三角形
+               }else if(drawType==TRIANGLE){//三角形
                    drawVelTriangle();
+               }else {//正方形
+                   drawVelSquare();
                }
                break;
 
@@ -213,9 +217,12 @@ public class VoucherView extends LinearLayout {
                }else if (drawType==ELLIPSE){//椭圆
                    drawHorEllipse();
                    drawVelEllipse();
-               }else {//三角形
+               }else if (drawType==TRIANGLE){//三角形
                    drawHorTriangle();
                    drawVelTriangle();
+               }else {
+                   drawHorSquare();
+                   drawVelSquare();
                }
                break;
        }
@@ -246,11 +253,11 @@ public class VoucherView extends LinearLayout {
             rectf.right = x+mRadius;
             rectf.top = 0;
             rectf.bottom = mRadius;
-            // 绘制椭圆
+            // 绘制上面的椭圆
             mCanvas.drawOval(rectf, mPaint);
             rectf.top = getHeight()-mRadius;
             rectf.bottom = getHeight();
-            // 绘制椭圆
+            // 绘制下面的椭圆
             mCanvas.drawOval(rectf, mPaint);
         }
     }
@@ -282,7 +289,32 @@ public class VoucherView extends LinearLayout {
             mCanvas.drawPath(path,mPaint);
         }
     }
+    /**
+     * 绘制水平的正方形
+     */
+    private void drawHorSquare() {
+        for (int i=0;i<mCircleNum_H;i++){
+            float x = mGap+mRadius+mRemain_H/2+((mGap+mRadius*2)*i);
 
+            mCanvas.drawRect(0,x,0,mRadius,mPaint);
+            // 定义正方形对象
+            RectF rectf = new RectF();
+            // 设置正方形大小
+            rectf.left = x-mRadius/2;
+            rectf.right = x+mRadius/2;
+            rectf.top = 0;
+            rectf.bottom = mRadius;
+            // 绘制上面的正方形
+            mCanvas.drawRect(rectf, mPaint);
+            rectf.top = getHeight()-mRadius;
+            rectf.bottom = getHeight();
+            // 绘制下面的正方形
+            mCanvas.drawRect(rectf, mPaint);
+        }
+    }
+
+
+    ////***********************************************************////
 
     /**
      * 绘制垂直的圆
@@ -303,18 +335,18 @@ public class VoucherView extends LinearLayout {
         for (int i=0;i<mCircleNum_V;i++){
             float y = mGap+mRadius+mRemain_V/2+((mGap+mRadius*2)*i);
             // 定义椭圆对象
-            RectF rectf1 = new RectF();
+            RectF rectf = new RectF();
             // 设置椭圆大小
-            rectf1.left = 0;
-            rectf1.right = mRadius;
-            rectf1.top = y-mRadius;
-            rectf1.bottom = y+mRadius;
+            rectf.left = 0;
+            rectf.right = mRadius;
+            rectf.top = y-mRadius;
+            rectf.bottom = y+mRadius;
             // 绘制椭圆
-            mCanvas.drawOval(rectf1, mPaint);
-            rectf1.left = getWidth()-mRadius;
-            rectf1.right = getWidth();
+            mCanvas.drawOval(rectf, mPaint);
+            rectf.left = getWidth()-mRadius;
+            rectf.right = getWidth();
             // 绘制椭圆
-            mCanvas.drawOval(rectf1, mPaint);
+            mCanvas.drawOval(rectf, mPaint);
         }
     }
 
@@ -346,6 +378,30 @@ public class VoucherView extends LinearLayout {
         }
     }
 
+
+
+
+    /**
+     * 绘制垂直的椭圆
+     */
+    private void drawVelSquare() {
+        for (int i=0;i<mCircleNum_V;i++){
+            float y = mGap+mRadius+mRemain_V/2+((mGap+mRadius*2)*i);
+            // 定义椭圆对象
+            RectF rectf = new RectF();
+            // 设置椭圆大小
+            rectf.left = 0;
+            rectf.right = mRadius/2;
+            rectf.top = y-mRadius/2;
+            rectf.bottom = y+mRadius;
+            // 绘制椭圆
+            mCanvas.drawRect(rectf, mPaint);
+            rectf.left = getWidth()-mRadius;
+            rectf.right = getWidth();
+            // 绘制椭圆
+            mCanvas.drawRect(rectf, mPaint);
+        }
+    }
 
     /**
      * ------------- 设置属性的方法 -------------
