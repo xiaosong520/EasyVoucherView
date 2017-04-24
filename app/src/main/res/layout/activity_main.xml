@@ -16,7 +16,7 @@
         android:padding="30dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        VoucherView:drawType="triangle"
+        VoucherView:drawType="square"
         VoucherView:orientation="horizontal"
         VoucherView:mGap="2dp"
         VoucherView:mRadius="5dp"
