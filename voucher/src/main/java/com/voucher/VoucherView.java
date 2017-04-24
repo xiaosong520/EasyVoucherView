@@ -100,11 +100,8 @@ public class VoucherView extends LinearLayout {
     /**
      *  item数量的 计算公式 ：
      *  circleNum = (int) ((w-gap)/(2*radius+gap));
-     * @param w
-     * @param h
-     * @param oldw
-     * @param oldh
      */
+
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
@@ -187,7 +184,7 @@ public class VoucherView extends LinearLayout {
                    drawHorEllipse();
                }else if(drawType==TRIANGLE){//三角形
                    drawHorTriangle();
-               }else{//正方形
+               }else if(drawType==SQUARE){//正方形
                    drawHorSquare();
                }
                break;
@@ -202,7 +199,7 @@ public class VoucherView extends LinearLayout {
                    drawVelEllipse();
                }else if(drawType==TRIANGLE){//三角形
                    drawVelTriangle();
-               }else {//正方形
+               }else if(drawType==SQUARE){//正方形
                    drawVelSquare();
                }
                break;
@@ -220,7 +217,7 @@ public class VoucherView extends LinearLayout {
                }else if (drawType==TRIANGLE){//三角形
                    drawHorTriangle();
                    drawVelTriangle();
-               }else {
+               }else if(drawType==SQUARE){//正方形
                    drawHorSquare();
                    drawVelSquare();
                }
@@ -228,6 +225,8 @@ public class VoucherView extends LinearLayout {
        }
     }
 
+
+    ////***********************************************************////
 
     /**
      * 绘制水平的圆
@@ -313,7 +312,6 @@ public class VoucherView extends LinearLayout {
         }
     }
 
-
     ////***********************************************************////
 
     /**
@@ -379,8 +377,6 @@ public class VoucherView extends LinearLayout {
     }
 
 
-
-
     /**
      * 绘制垂直的椭圆
      */
@@ -402,6 +398,9 @@ public class VoucherView extends LinearLayout {
             mCanvas.drawRect(rectf, mPaint);
         }
     }
+
+
+
 
     /**
      * ------------- 设置属性的方法 -------------
