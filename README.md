@@ -13,7 +13,7 @@
 
 ![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/others.png)
 
-为了解决掉这个问题，我用另外的思路实现了这个功能，利用图像合成类PorterDuffXfermode并给画笔设置DST_OUT模式，让这个控件的边缘锯齿透明的
+为了解决掉这个问题，我用另外的思路实现了这个功能，利用图像合成类PorterDuffXfermode并给画笔设置DST_OUT模式，让这个控件的边缘锯齿透明。
 
 ### 本项目实现的效果图
 
