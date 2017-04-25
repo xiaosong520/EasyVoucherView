@@ -25,19 +25,20 @@
 ## How to use 
 
 
-#### 引入依赖 （Dependency Library）
+### 引入依赖 （Dependency Library）
 
-有三种方式：
+**有三种方式**：
 
-1.引入Jcenter 库
+#### 1.引入Jcenter 库
 
 ```
 compile 'com.xiaosong520:voucher:1.0.1'
 ```
 
-2.下载源代码，将Module引入到项目。
+#### 2.下载源代码，将Module引入到项目。
 
-3.下载源代码，将项目中 VoucherView 类 以及 attrs.xml 文件里面的自定义属性拷贝到项目中去。
+#### 3.下载源代码，将项目中 VoucherView 类 以及 attrs.xml 文件里面的自定义属性拷贝到项目中去。
+
 
 #### 在需要使用的布局文件中，添加控件，代码如下：
 
@@ -61,7 +62,7 @@ xmlns:VoucherView="http://schemas.android.com/apk/res-auto"
         VoucherView:mRadius="5dp"
         VoucherView:BgColor="#FFA90F">
 ```
-#### 3.自定义属性（attrs）
+#### 4.自定义属性（attrs）
 
 |method(方法名称)|format(参数格式）|description（描述）|
 |---|---|---|
