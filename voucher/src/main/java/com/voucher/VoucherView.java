@@ -78,7 +78,7 @@ public class VoucherView extends LinearLayout {
         super(context, attrs, defStyleAttr);
 
         if (attrs != null) {
-            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.scratchView, 0, 0);
+            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.voucherView, 0, 0);
             drawType = a.getInt(R.styleable.scratchView_drawType, CIRCLE);
             mOrientation = a.getInt(R.styleable.scratchView_orientation,DRAW_HORIZONTAL);//默认水平方向
             mGap = a.getDimensionPixelOffset(R.styleable.scratchView_mGap, 5);
