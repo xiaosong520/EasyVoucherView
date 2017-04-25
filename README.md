@@ -22,6 +22,7 @@
 ![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/square.png)
 ![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/triangle.png)
 
+
 ## How to use 
 
 
@@ -35,12 +36,12 @@
 compile 'com.xiaosong520:voucher:1.0.1'
 ```
 
-#### 2.下载源代码，将Module引入到项目。
+#### 2.下载源代码，将Module引入到项目
 
 #### 3.下载源代码，将项目中 VoucherView 类 以及 attrs.xml 文件里面的自定义属性拷贝到项目中去。
 
 
-#### 在需要使用的布局文件中，添加控件，代码如下：
+### 在需要使用的布局文件中，添加控件，代码如下
 
 根部局添加如下属性：
 
@@ -62,6 +63,7 @@ xmlns:VoucherView="http://schemas.android.com/apk/res-auto"
         VoucherView:mRadius="5dp"
         VoucherView:BgColor="#FFA90F">
 ```
+
 #### 4.自定义属性（attrs）
 
 |method(方法名称)|format(参数格式）|description（描述）|
