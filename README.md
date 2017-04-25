@@ -22,17 +22,31 @@
 ![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/square.png)
 ![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/triangle.png)
 
-## How to use （如何使用）
+## How to use 
 
-#### 1.下载源代码，然后将项目中 VoucherView 类 以及 attrs.xml 文件里面的自定义属性拷贝到项目中去
 
-#### 2.在需要使用的布局文件中，添加控件，代码如下(路径请替换成实际项目中 VoucherView 类所在的路径)：
+#### 引入依赖 （Dependency Library）
+
+有三种方式：
+
+1.引入Jcenter 库
+
+```
+compile 'com.xiaosong520:voucher:1.0.1'
+```
+
+2.下载源代码，将Module引入到项目。
+
+3.下载源代码，将项目中 VoucherView 类 以及 attrs.xml 文件里面的自定义属性拷贝到项目中去。
+
+#### 在需要使用的布局文件中，添加控件，代码如下：
 
 根部局添加如下属性：
 
 xmlns:VoucherView="http://schemas.android.com/apk/res-auto"
 
-添加控件：
+
+添加控件(路径请替换成实际项目中 VoucherView 类所在的路径)：
 
 ```xml
  <com.voucher.VoucherView
