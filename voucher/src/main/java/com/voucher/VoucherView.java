@@ -79,11 +79,11 @@ public class VoucherView extends LinearLayout {
 
         if (attrs != null) {
             TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.voucherView, 0, 0);
-            drawType = a.getInt(R.styleable.scratchView_drawType, CIRCLE);
-            mOrientation = a.getInt(R.styleable.scratchView_orientation,DRAW_HORIZONTAL);//默认水平方向
-            mGap = a.getDimensionPixelOffset(R.styleable.scratchView_mGap, 5);
-            mRadius = a.getDimensionPixelOffset(R.styleable.scratchView_mRadius, 10);
-            mPaintColor = a.getColor(R.styleable.scratchView_BgColor, 0xFFc0c0c0);
+            drawType = a.getInt(R.styleable.voucherView_drawType, CIRCLE);
+            mOrientation = a.getInt(R.styleable.voucherView_orientation,DRAW_HORIZONTAL);//默认水平方向
+            mGap = a.getDimensionPixelOffset(R.styleable.voucherView_mGap, 5);
+            mRadius = a.getDimensionPixelOffset(R.styleable.voucherView_mRadius, 10);
+            mPaintColor = a.getColor(R.styleable.voucherView_BgColor, 0xFFc0c0c0);
             a.recycle();//回收内存
         }
 
