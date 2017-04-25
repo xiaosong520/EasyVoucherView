@@ -14,11 +14,11 @@ import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
 
-
 /**
- * @TODO<自定义优惠券控件>
+ * 自定义优惠券控件
+ * date: 2017-4-14
  * @author 小嵩
- * @date 2017-4-14
+ *
  */
 
 public class VoucherView extends LinearLayout {
@@ -398,28 +398,5 @@ public class VoucherView extends LinearLayout {
             mCanvas.drawRect(rectf, mPaint);
         }
     }
-
-
-
-
-    /**
-     * ------------- 设置属性的方法 -------------
-     **/
-
-  /*  public void setRadius(float radius) {
-        mRadius = radius;
-    }
-
-    public void setGap(float gap) {
-        mGap = gap;
-    }
-
-    public void setColor(int color) {
-        mPaintColor = color;
-    }
-
-    public void setDrawType( int Type) {
-        this.drawType = Type;
-    }*/
 
 }

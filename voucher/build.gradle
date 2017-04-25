@@ -1,14 +1,15 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//添加插件
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -21,10 +22,31 @@ android {
     }
 }
 
+allprojects {
+    tasks.withType(Javadoc) {
+        options{
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
+}
+
+
+publish {
+    userOrg = 'xiaosong520'//bintray用户名
+    groupId = 'com.xiaosong520'//jcenter上的显示路径
+    artifactId = 'voucher'//项目名称 project name
+    publishVersion = '1.0.1'//版本号 version code
+    desc = 'this is a VoucherView for android'//项目描述 description
+    website = 'https://github.com/xiaosong520/EasyVoucherView' //项目网址链接 link
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
     testCompile 'junit:junit:4.12'
 }
