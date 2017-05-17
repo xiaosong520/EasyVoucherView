@@ -67,7 +67,7 @@ xmlns:VoucherView="http://schemas.android.com/apk/res-auto"
 #### 4.自定义属性（attrs）
 
 |method(方法名称)|format(参数格式）|description（描述）|
-|---|---|---|
+|:---:|:---:|:---:|
 |drawType|enum（枚举）|有圆形、椭圆、三角形、正方形这四种边缘锯齿形状
 |orientation|enum（枚举）|包含 horizontal、vertical、around 这三种方向，分别表示水平、垂直、四周。
 |mGap|dimension（尺寸）|该参数控制边缘锯齿之间的间隔宽度
