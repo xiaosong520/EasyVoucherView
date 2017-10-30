@@ -9,11 +9,11 @@
 
 3.边缘锯齿是透明的。
 
-之前看到的好几个项目都是单纯的绘制白色锯齿添加到Canvas上面去，如果把布局的背景改成其他的颜色，就会产生如下效果：
+之前看到的好几个项目都是单纯的绘制白色锯齿添加到Canvas上面去，如果把布局的背景改成其他的颜色，就会产生如下问题：
 
 ![EasyVoucherView](https://github.com/xiaosong520/EasyVoucherView/blob/master/preview/others.png)
 
-为了解决掉这个问题，我用另外的思路实现了这个功能，利用图像合成类PorterDuffXfermode并给画笔设置DST_OUT模式，让这个控件的边缘锯齿透明。
+为了解决这个问题，用了另外的思路实现这个功能，通过图像合成类PorterDuffXfermode并给画笔设置DST_OUT模式，让控件的边缘锯齿透明而不是白色。
 
 ### 本项目实现的效果图
 
